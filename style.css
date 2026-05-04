@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@300;400&display=swap');
+
+* { box-sizing: border-box; }
+
+body {
+    background-color: #050510; /* Deep Navy Background */
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+    padding: 15px;
+}
+
+/* --- THE NEON CARD DESIGN --- */
+.neon-card {
+    background: #0a0a15;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    padding: 25px 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 150, 255, 0.1);
+    
+    /* Gradient Border Trick */
+    background-clip: padding-box;
+}
+
+/* Glowing Border Effect */
+.neon-card::after {
+    content: '';
+    position: absolute;
+    top: -2px; bottom: -2px;
+    left: -2px; right: -2px;
+    background: linear-gradient(45deg, #00f2ff, #0044ff, #ff00ea);
+    z-index: -1;
+    border-radius: 12px;
+}
+
+/* --- HEADER CARD --- */
+.status-dot {
+    position: absolute;
+    top: 15px; right: 15px;
+    color: #00ff41;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.dot { width: 8px; height: 8px; background: #00ff41; border-radius: 50%; box-shadow: 0 0 5px #00ff41; }
+
+.logo-glow {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #00f2ff;
+    box-shadow: 0 0 25px rgba(0, 242, 255, 0.5);
+    margin: 10px auto;
+    object-fit: cover;
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+    margin-top: 15px;
+    background: linear-gradient(90deg, #00f2ff, #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- ACTION CARD --- */
+h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* Custom Input/Select Box */
+.custom-input {
+    width: 100%;
+    background: #050510;
+    border: 1px solid #333;
+    color: #fff;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+}
+.custom-input:focus { border-color: #00f2ff; }
+
+/* The Gradient Button (Cyan to Pink) */
+.btn-gradient {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #00dbde 0%, #fc00ff 100%);
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(252, 0, 255, 0.3);
+    transition: 0.3s;
+}
+.btn-gradient:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(0, 219, 222, 0.6);
+}
+
+/* --- LOG CARD --- */
+.log-box {
+    background: #020205;
+    border: 1px solid #1f1f3a;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: left;
+    font-family: monospace;
+    font-size: 12px;
+    color: #00f2ff;
+    height: 100px;
+    overflow-y: auto;
+}
+.log-time { color: #888; margin-right: 5px; }
